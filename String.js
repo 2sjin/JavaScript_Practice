@@ -41,3 +41,16 @@ var a = 'A door is orange colored.';
 console.log(a.replace('or', '**'));     // A do** is orange colored.
 console.log(a.replaceAll('or', '**'));  // A do** is **ange col**ed.
 
+// 백틱(`) 활용: 템플릿 리터럴(문자열 내 변수나 수식 포함)
+var a = 100
+var b = 200
+var c = `100 + 200 = ${a+b}`
+console.log(c)  // 100 + 200 = 300
+
+// 백틱(`) 활용: 여러줄 문자 만들기
+var a = `Hello,
+JavaScript
+World!!!`
+console.log(a)  // Hello,
+                // JavaScript
+                // World!!!
