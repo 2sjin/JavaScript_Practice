@@ -12,10 +12,22 @@ while (i < 10) {
     i++;
 }
 
-// for of 반복문(배열 활용)
-let arr = [10, 20, 30, 40];
+// for of 반복문(배열 활용, 원소 출력)
+var arr = [10, 20, 30, 40];
 for (let i of arr) {
     console.log(i);     // 10 20 30 40
+}
+
+// for in 반복문(배열 활용, 원소 index-value 출력)
+var arr = ['A', 'B', 'C', 'D'];
+for (let i in arr) {
+    console.log(i + '-' + arr[i]);  // 0-A 1-B 2-C 3-D
+}
+
+// for in 반복문(오브젝트 활용, key-value 출력)
+let obj = {name: '홍길동', age: 27, country:'대한민국'};
+for (let i in obj) {
+    console.log(i + ':' + obj[i]);  // name:홍길동 age:27 country:'대한민국'
 }
 
 // 함수 정의 및 호출
