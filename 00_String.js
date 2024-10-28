@@ -8,7 +8,7 @@ console.log(a.length);     // 14
 var a = 'Hello';
 var b = 'World';
 console.log(a.concat(b));   // HelloWorld
-console.log(a+b);           // HelloWorld
+console.log(a + b);         // HelloWorld
 
 // 문자열 인덱싱
 var a = 'Hello World';
@@ -16,8 +16,18 @@ console.log(a.charAt(0));   // H
 console.log(a.charAt(6));   // W
 console.log(a[6]);          // W
 
-// 문자열에서 특정 부분 골라내기
+// 문자열 슬라이싱(start, length)
+var a = 'ABCDEFG';
+console.log(a.substr(1));       // BCDEFG
+console.log(a.substr(1, 4));    // BCDE
 
+// 문자열 슬라이싱(start, end)
+var a = 'abcdefg';
+console.log(a.slice(1));        // bcdefg
+console.log(a.slice(1, 4));     // bcd
+console.log(a.slice(-1));       // g
+console.log(a.slice(-3));       // efg
+console.log(a.slice(2, -1));    // cdef
 
 // 문자열 분할(배열로 저장)
 var a = 'abcdefg';
@@ -26,6 +36,33 @@ console.log(a.split(''));       // ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 console.log(a.split('', 5));    // ['a', 'b', 'c', 'd', 'e']
 console.log(b.split(' '));      // ['My', 'Name', 'is', 'JavaScript']
 console.log(b.split(' ', 2));   // ['My', 'Name']
+
+// 특정 문자열의 시작 위치 확인
+var a = 'My Name is JavaScript';
+console.log(a.indexOf('i'));        // 8
+console.log(a.indexOf('Name'));     // 3
+console.log(a.indexOf('Java'));     // 11
+
+// 특정 문자열의 마지막 위치 확인
+var a = 'My Name is JavaScript';
+console.log(a.lastIndexOf('i'));     // 18
+
+// 특정 문자열을 포함하는지 확인
+var a = 'My Name is JavaScript';
+console.log(a.includes('Java'));        // true
+console.log(a.includes('JavaScript'));  // true
+console.log(a.includes('Python'));      // false
+
+// 특정 문자열로 시작하는지 확인
+var a = 'My Name is JavaScript';
+console.log(a.startsWith('M'));         // true
+console.log(a.startsWith('My Name'));   // true
+console.log(a.startsWith('Script'));    // false
+
+// 특정 문자열로 끝나는지 확인
+var a = 'My Name is JavaScript';
+console.log(a.endsWith('My Name'));   // false
+console.log(a.endsWith('Script'));    // true
 
 // 문자열 대소문자 변환
 var a = 'Hello JavaScript';
@@ -54,3 +91,5 @@ World!!!`
 console.log(a);  // Hello,
                 // JavaScript
                 // World!!!
+
+
