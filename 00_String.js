@@ -87,9 +87,19 @@ console.log(c)  // 100 + 200 = 300
 // 백틱(`) 활용: 여러줄 문자 만들기
 var a = `Hello,
 JavaScript
-World!!!`
+World!!!`;
 console.log(a);  // Hello,
                 // JavaScript
                 // World!!!
 
+// 문자열을 숫자로 타입 변환
+var str = '1234.567';
+console.log(typeof str);    // string
+var num = Number(str);
+console.log(typeof num);    // number
 
+// 숫자를 문자열로 타입 변환
+var num = 1234.567;
+console.log(typeof num);    // number
+str = num.toString();
+console.log(typeof str)     // string
