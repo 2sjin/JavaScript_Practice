@@ -6,6 +6,20 @@ console.log(Math.abs(-123));    // 123
 // 제곱(2의 10승)
 console.log(Math.pow(2, 10));   // 1024
 
+// 최대값
+console.log(Math.max(200, 500, 100, 300, 400));     // 500
+
+// 최대값(배열은 스프레드 연산자 사용)
+var arr = [200, 500, 100, 300, 400];
+console.log(Math.max(...arr));                      // 500
+
+// 최소값
+console.log(Math.min(200, 500, 100, 300, 400))      // 100
+
+// 최소값(배열은 스프레드 연산자 사용)
+var arr = [200, 500, 100, 300, 400];
+console.log(Math.min(...arr));                      // 100
+
 // 올림
 console.log('\n올림')
 console.log(Math.ceil(10.1));   // 11
