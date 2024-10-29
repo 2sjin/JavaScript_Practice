@@ -26,6 +26,7 @@ console.log(arr.indexOf('C'));  // 2
 var a = ['A', 'B', 'C'];
 var b = ['D', 'E', 'F'];
 console.log(a.concat(b));   // ['A', 'B', 'C', 'D', 'E', 'F']
+console.log([...a, ...b])   // ['A', 'B', 'C', 'D', 'E', 'F']
 
 // 배열 마지막에 원소 추가
 var arr = ['A', 'B', 'C'];
@@ -66,3 +67,20 @@ console.log(arr.join('::'));    // A::B::C::D
 var arr = ['B', 'A', 'C', 'A', 'A', 'B'];
 var arrSet = [...new Set(arr)];
 console.log(arrSet);    // ['B', 'A', 'C']
+
+// 스프레드 연산자
+var a = ['A', 'B', 'C'];
+var b = ['D', 'E', 'F'];
+console.log(...a);          // A B C
+console.log(...b);          // D E F
+
+// 스프레드 연산자 - 배열 결합
+console.log([...a, ...b]);  // ['A', 'B', 'C', 'D', 'E', 'F']
+
+// 스프레드 연산자 - 배열 복사
+var arr = ['A', 'B', 'C'];
+var arr2 = arr;         // 얕은 복사
+var arr3 = [...arr];    // 깊은 복사
+arr.push('D', 'E');
+console.log(arr2);  // ['A', 'B', 'C', 'D', 'E']
+console.log(arr3);  // ['A', 'B', 'C']
