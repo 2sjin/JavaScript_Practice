@@ -52,9 +52,18 @@ console.log(arr);   // ['A', 'B', 'C']
 var arr = ['A', 'B', 'C', 'D'];
 console.log(arr.reverse()); // ['D', 'C', 'B', 'A']
 
-// 배열 정렬(오름차순)
-var arr = [200, 'B', '마바사', 100, 'C', 300, 'A', '가나다'];
-console.log(arr.sort());    // [100, 200, 300, 'A', 'B', 'C', '가나다', '마바사']
+// 배열 정렬(문자열 정렬)
+var arr = [30, 200, 'B', '마바사', 100, 'C', 300, 'A', 11, '가나다'];
+console.log(arr.sort());    // [100, 11, 200, 30, 300, 'A', 'B', 'C', '가나다', '마바사']
+
+// 배열 정렬(숫자 정렬)
+var arr = [10, 3, 8, 4, 1];
+var arr_sorted = arr.sort((a, b) => a-b);   // 오름차순 정렬
+console.log(arr_sorted);    // [1, 3, 4, 8, 10]
+var arr_sorted = arr.sort((a, b) => b-a);   // 내림차순 정렬
+console.log(arr_sorted);    // [10, 8, 4, 3, 1]
+var arr_sorted = arr.sort()                 // 문자열 정렬
+console.log(arr_sorted);    // [1, 10, 3, 4, 8]
 
 // 배열을 문자열로 변환
 var arr = ['A', 'B', 'C', 'D'];
