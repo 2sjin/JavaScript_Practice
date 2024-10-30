@@ -6,6 +6,10 @@ console.log(Math.abs(-123));    // 123
 // 제곱(2의 10승)
 console.log(Math.pow(2, 10));   // 1024
 
+// 제곱근
+console.log(Math.sqrt(81));     // 9
+console.log(Math.sqrt(2));      // 1.4142135623730951
+
 // 최대값
 console.log(Math.max(200, 500, 100, 300, 400));     // 500
 
