@@ -16,6 +16,33 @@ console.log(factorial(10));  // 3628800
 
 
 
+// 최대공약수 함수 정의(유클리드 호제법)
+function gcd(a, b) {
+    while (b != 0) {
+        let r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+// 최대공약수 함수 호출
+console.log(gcd(16, 24));   // 8
+console.log(gcd(4, 6));     // 2
+console.log(gcd(30, 18));   // 6
+
+// 최소공배수 함수 정의(두 수의 곱/최대공약수)
+function lcm(a, b) {
+    return a * b / gcd(a, b);
+}
+
+// 최소공배수 함수 호출
+console.log(lcm(16, 24));   // 48
+console.log(lcm(10, 8));    // 40
+console.log(lcm(3, 4))      // 12  
+
+
+
 // 순열 함수 정의/호출
 function permutation(arr, n) {
     if (n === 0) return [[]];
